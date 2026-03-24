@@ -1,0 +1,124 @@
+# ================================
+# Application Debug Log
+# ================================
+
+[INFO] Starting service at 2026-03-25T10:15:32Z
+[DEBUG] Loading environment variables...
+
+AWS_ACCESS_KEY_ID=AKIA9F8D7S6A5B4C3D2E
+AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+
+# Random noise (low entropy)
+dummy_key=AAAAAAAAAAAAAAAAAAAA
+test_string=12345678901234567890
+
+# ================================
+# JSON Config Dump
+# ================================
+
+{
+  "service": "payment-gateway",
+  "stripe_key": "sk_live_51N7xYAbCdEfGhIjKlMnOpQrStUvWxYz123456",
+  "retry_attempts": 3,
+  "feature_flag": true
+}
+
+# ================================
+# GitHub Integration
+# ================================
+
+# Production token (DO NOT SHARE)
+GITHUB_TOKEN=ghp_d4F5g6H7j8K9LmNoPqRsTuVwXyZaBcDeFgHiJkLm
+
+# Fine-grained token
+GITHUB_FINE_TOKEN=github_pat_11AA22BB33CC44DD55EE66FF77GG88HH99II00JJ11KK22LL33MM44NN55OO66
+
+# ================================
+# Slack Webhook Leak Example
+# ================================
+
+POST https://hooks.slack.com/services/T0ABCDEF1/B0GHIJKL2/abcdEFGHijklMNOPqrstUVWX
+
+# ================================
+# OpenAI API usage snippet
+# ================================
+
+openai.api_key = "sk-proj-9xYzAbCdEfGhIjKlMnOpQrStUvWxYz987654321"
+
+# Another variant
+export OPENAI_API_KEY=sk-xyzABC1234567890abcdefghijklmnop
+
+# ================================
+# GCP Config
+# ================================
+
+api_key = "AIzaSyD4fGhIjKlMnOpQrStUvWxYz1234567890ABCDE"
+
+# ================================
+# Twilio Credentials
+# ================================
+
+TWILIO_ACCOUNT_SID=ACa1b2c3d4e5f67890123456789abcdef0
+TWILIO_API_KEY=SKabcdef1234567890abcdef1234567890
+
+# ================================
+# Azure Storage Config
+# ================================
+
+DefaultEndpointsProtocol=https;
+AccountName=myaccount;
+AccountKey=QWxhZGRpbjpPcGVuU2VzYW1lU3RyYW5nZUtleVN0cmluZw==
+
+# ================================
+# Shopify Token
+# ================================
+
+SHOPIFY_ADMIN_TOKEN=shpat_abcdef1234567890abcdef1234567890
+
+# ================================
+# PayPal Token
+# ================================
+
+access_token$production$1a2b3c4d5e6f7g8h$abcdef1234567890abcdef1234567890
+
+# ================================
+# High Entropy Random Strings (to test false positives)
+# ================================
+
+random_blob_1=9f8a7c6b5e4d3c2b1a0f9e8d7c6b5a4f3e2d1c0b
+random_blob_2=ZxYwVuTsRqPoNmLkJiHgFeDcBa9876543210qwerty
+random_blob_3=KJHGFDSAZXCVBNMqwertyuiop1234567890LKJHGF
+
+# ================================
+# Edge Cases
+# ================================
+
+# Almost AWS key but invalid
+AKIA1234INVALIDKEY
+
+# Truncated OpenAI key
+sk-12345
+
+# Mixed case / tricky formatting
+GhP_abcdef1234567890abcdef1234567890abcd
+
+# Embedded in URL
+https://api.example.com?token=ghp_abcd1234efgh5678ijkl9012mnop3456qrst7890
+
+# Base64-like but not a key
+YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXo=
+
+# ================================
+# Comments & Code Snippets
+# ================================
+
+# TODO: Remove before production
+const API_KEY = "sk-live-should-not-be-here";
+
+function connect() {
+    const key = process.env.GITHUB_TOKEN || "fallback_key_123";
+}
+
+# ================================
+# End of File
+# ================================
